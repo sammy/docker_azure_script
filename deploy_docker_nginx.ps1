@@ -38,7 +38,7 @@ else  {
 $parameters = GenerateParameters $vmname $credentials $vnet_cidr $dnsname $storageaccountname
 New-AzureRmResourceGroupDeployment  -Name                     ("$rg_name-" + (Get-Date -UFormat "%A.%d.%m.%Y-%H-%M")) `
                                     -ResourceGroupName        $rg_name `
-                                    -TemplateFile             "$home_dir\docker_template\azuredeploy.json" `
+                                    -TemplateFile             "$home_dir\docker_azure_template\azuredeploy.json" `
                                     -TemplateParameterObject  $parameters
 
 
