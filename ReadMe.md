@@ -86,6 +86,6 @@ The script will create a Dockerfile, build a docker nginx image with some static
 
 + For a production situation it would be preferred that the Vnet is split in two subnets, to model a DMZ - Trusted scenario. A load balancer would then be placed in the DMZ and it would handle all communications. The trusted subnet should only allow traffic from the load balancer on specific ports. This would also cater for horizontal scalability and high availability and we could execute the same script with a different ```-vmname``` parameter to add vm's to the load balancer.
 
-<a href="http://armviz.io/#/?load=https://raw.githubusercontent.com/sammy/docker_template/master/azuredeploy.json" target="_blank">
+<a href="http://armviz.io/#/?load=https://raw.githubusercontent.com/sammy/docker_azure_template/master/azuredeploy.json" target="_blank">
   <img src="http://armviz.io/visualizebutton.png"/>
 </a>
