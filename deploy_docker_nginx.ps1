@@ -49,5 +49,5 @@ $publicIP = Get-AzureRMPublicIPAddress -ResourceGroupName $rg_name -Name ($dnsna
 $url = ('http://' + $publicIP.dnsSettings.FQDN)
 $response = Invoke-WebRequest -Uri $url
 
-if ($response.StatusCode = 200) { Start $url }
+if ($response.StatusCode -eq 200) { Start $url }
 else { Write-Host "Oops! We received a status code of $($response.StatusCode) while expecting a 200" -foregroundcolor "red" }
