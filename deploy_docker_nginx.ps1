@@ -24,7 +24,7 @@ $storageaccountname = ($rg_name -creplace '[^a-zA-Z0-9]').toLower()
 $home_dir = "~\" + $rg_name + "-" + (Get-Date -UFormat %s)
 mkdir $home_dir
 Set-Location $home_dir
-git clone -b testing https://github.com/sammy/docker_template.git
+git clone https://github.com/sammy/docker_azure_template.git
 
 $rg_list = Get-AzureRmResourceGroup
 $existing_resource_groups = @()
