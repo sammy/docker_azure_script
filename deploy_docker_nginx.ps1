@@ -44,7 +44,6 @@ New-AzureRmResourceGroupDeployment  -Name                     ("$rg_name-" + (Ge
 
 Set-Location ~
 Remove-Item -Recurse -Force $home_dir
-Set-Location D:\deployment_script
 
 $publicIP = Get-AzureRMPublicIPAddress -ResourceGroupName $rg_name -Name ($dnsname + "_publicIP")
 Start ('http://' + $publicIP.dnsSettings.FQDN)
